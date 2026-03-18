@@ -19,9 +19,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install nbconvert ipykernel
-          
-      - name: Scrape
-        run: warn-scraper ia --data-dir ./data/
       - name: Run Notebook
         run: |
           jupyter nbconvert --to notebook --execute scrape.ipynb
